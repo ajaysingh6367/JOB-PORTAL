@@ -1,0 +1,16 @@
+{
+  "name": "careerhub-job-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack job portal with React, Node, Express, MongoDB, JWT, Multer and Cloudinary",
+  "scripts": {
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently -n CLIENT,SERVER -c blue,green \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

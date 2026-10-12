@@ -1,0 +1,1 @@
+import {Router} from 'express'; import {stats,users,jobs,deleteUser,deleteJob} from '../controllers/adminController.js'; import {protect,roles} from '../middleware/auth.js'; const r=Router(); r.use(protect,roles('admin')); r.get('/stats',stats); r.get('/users',users); r.get('/jobs',jobs); r.delete('/users/:id',deleteUser); r.delete('/jobs/:id',deleteJob); export default r;
